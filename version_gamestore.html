@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version games Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Adjusted text color */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            font-family: Corbel;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Parallax background */
+        .parallax-container {
+            min-height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .parallax {
+            background-image: url("https://th.bing.com/th/id/OIP.YE7YNTOTxrW7TJmlYt5qSQAAAA?rs=1&pid=ImgDetMain");
+            min-height: 500px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            filter: blur(2px);
+        }
+
+        /* Content within parallax */
+        .content {
+            position: relative;
+            color: #fff; /* Adjusted text color */
+            text-align: center;
+            padding: 100px 0;
+            z-index: 1; /* Ensuring content appears above the parallax */
+        }
+/* Add some basic styling to the song containers */
+.song-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the audio players */
+audio {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the song titles */
+.song-container p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Add some hover effects to the song containers */
+.song-container:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Add some transition effects to the song containers */
+.song-container {
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+ 
+   .option img,button{
+        position: relative;
+        border: 3px outset #2f0898;
+        border-radius: 1px 25px; 
+        margin: auto;
+        padding: 8px 8px;
+        animation: b_change 9s infinite linear; 
+}
+
+.text{
+         color: #silver; /* Fallback */
+  animation: c_change 9s infinite linear;
+}
+
+
+  @keyframes c_change{
+  0%   { color: darkgreen; }
+  20%  { color: purple; }
+  60%  { color: violet; }
+  100% { color:darkgreen; }
+}
+  @keyframes b_change {
+  0%   { border-color: darkblack; }
+  20%  { border-color: darkgreen; }
+  40%  { border-color: purple; }
+  60%  { border-color: violet; }
+  80%  { border-color: darkblue; }
+  100% { border-color:darkblack; }
+}
+.option h2{
+    font-size: 200%;
+}
+   
+.end{
+
+    background-color:black;
+    border:2px solid white;
+    padding:10px 10px;
+}
+.end h1{
+    color:white;
+     font-family: Times New Roman;
+      font-size:20px;
+       text-align:center;
+}
+
+.end table{
+  width:100%;
+  border:2px soid red;
+  color:white;
+  text-align:center;
+}
+
+.Download
+{  width: 65%;
+   color: #ffffff;
+    background: #2f0898;
+    cursor: pointer;
+    font-family: Corbel;
+}
+
+
+.popup {
+            background-color: lightblue;
+            width: 75%;
+            padding: 20px 25px;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border: 2px outset #2f0898;
+            border-radius: 1px 20px;
+            display: none;
+            z-index: 1;
+            font-family: Corbel;
+        }
+        .popup button {
+            display: block;
+            margin: 0 0 20px auto;
+            font-size: 20px;
+            padding: 10px 10px;
+            color: #ffffff;
+            background: #2f0898;
+            border: none;
+            border-radius: 1px 25px;
+            cursor: pointer;
+        }
+        .popup button#close {
+            background: transparent;
+            color: #2f0898;
+            font-size: 25px;
+            border: none;
+            cursor: pointer;
+        }
+        fieldset {
+            border: none;
+        }
+    </style>
+
+</head>
+<body bgcolor="silver">
+    <div class="parallax-container">
+        <div class="parallax"></div>
+        <div class="content">
+            <!-- Your content goes here -->
+            <h1 >Version Emulators's games</h1>
+            <p >the world of video games and inovations.</p>
+        </div>
+    </div>
+    <header>
+        <h1 class="text">Version Emulator's Game (Best 8 PSP games)</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#games">games</a>
+        <a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">emulator</a>
+        <a href="#about">Contact</a>
+    </nav>
+    
+<section id="games">
+<div class=" option"><center>
+        <h2 style="font-family: Corbel;">The Available Games For Playing. </h2><hr>
+        <table style="border: 2px solid pink;">
+
+<tr>
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html" >
+        <p><img src="https://th.bing.com/th?id=OIP.5Zy-pog_QbRjALPiBADZugHaLH&w=204&h=306&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"  height="60%" width="60%"></img> <br>
+                <a href="https://serve.emulatorgames.net/roms/playstation-portable/Grand%20Theft%20Auto%20-%20Vice%20City%20Stories%20(USA)%20(v1.03).zip"><button  id="downloadButton1" class=Download>Download</button></p><a/><br><br><br><br><hr></a>
+</td>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">GTA vice city stories</marquee></h1></centre><hr></a><br><br>Size: approximately 1.50 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/vice-city-storie-grand-theft-auto-vice.html"> here.</a>"</p>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">God Of War <br> ghost of sparta</marquee></h1></centre><hr></a><br><br>Size:approximately 1.10 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/god-of-war-ghost-of-sparta-god-of-war.html"> here.</a>"
+</p></td> 
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html"><img src="https://th.bing.com/th?id=OIP.Ia6oW28wa0gXxixYr0Ph7AHaMc&w=192&h=324&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"  height="60%" width="60%"></img><br><a href="
+https://serve.emulatorgames.net/serve2/roms/playstation-portable/God%20of%20War%20-%20Ghost%20of%20Sparta%20(Asia)%20(En,Zh).zip"><button  id="downloadButton2" class=Download>Download</button><br><br><br><br><hr></a>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html" >
+        <p><img src="https://th.bing.com/th/id/OIP.co5rCOwgPnPT0SxuwAGs2gHaMG?w=115&h=180&c=7&r=0&o=5&pid=1.7"  height="60%" width="60%"></img> <br>
+                <a href="https://serve.emulatorgames.net/serve3/roms/playstation-portable/Naruto%20Shippuden%20-%20Ultimate%20Ninja%20Impact%20(USA)%20(En,Fr,Es).zip"><button  id="downloadButton3" class=Download>Download</button></p><a/><br><br><br><br><hr></a>
+</td>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Naruto Shippuden<br>Ultimate Ninja impact  </marquee></h1></centre><hr></a><br><br>Size: approximately 1.20 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/overview-naruto-shippuden-ultimate.html"> here.</a>"</p>
+</td>
+</tr>
+
+
+<tr>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Metal Gear Solid Peace Walker</marquee></h1></centre><hr></a><br><br>Size: approximately 1.50 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/game-overview-metal-gear-solid-peace.html"> here.</a>"
+</p></td> 
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html"><img src="https://th.bing.com/th?id=OIP.bmQ32lx0f9h2fK7S_MoM9QHaJ4&w=216&h=288&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"  height="60%" width="60%"></img><br><a href="https://serve.emulatorgames.net/serve4/roms/playstation-portable/Metal%20Gear%20Solid%20-%20Peace%20Walker%20(USA)%20(v1.01).zip"><button  id="downloadButton6" class=Download>Download</button><br><br><br><br><hr></a>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html" >
+        <p><img src="https://th.bing.com/th/id/OIP.B1QMKbS-IgizUi8jvKf3xwHaMs?w=115&h=180&c=7&r=0&o=5&pid=1.7"  height="60%" width="60%"></img> <br>
+                <a href="https://server.emulatorgames.net/server3/roms/playstation-portable/Dragon%20Ball%20Z%20-%20Shin%20Budokai%202%20(Europe)%20(En,Fr,De,Es,It).zip"><button  id="downloadButton5" class=Download>Download</button></p><a/><br><br><br><br><hr></a>
+</td>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Dragon Ball Shin Budokai</marquee></h1></centre><hr></a><br><br>Size: approximately 0.50 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/game-overview-mortal-kombat-unchained.html"> here.</a>"</p>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Mortal Kombat Unchained</marquee></h1></centre><hr></a><br><br>Size: approximately 1.20 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="https://videogame-version22.blogspot.com/2024/06/game-overview-mortal-kombat-unchained.html"> here.</a>"
+</p></td> 
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html"><img src="https://www.consoleroms.com/img/roms/mortal-kombat-unchained-psp-cover.jpg"  height="60%" width="60%"></img><br><a href="https://server.emulatorgames.net/roms/playstation-portable/Mortal%20Kombat%20-%20Unchained%20(USA)%20(v1.03).zip"><button  id="downloadButton6" class=Download>Download</button><br><br><br><br><hr></a>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html" >
+        <p><img src="https://th.bing.com/th/id/OIP.ZvPYbwMys65mELPhDPPJCwHaMs?w=115&h=184&c=7&r=0&o=5&pid=1.7"  height="60%" width="60%"></img> <br>
+                <a href="https://server.emulatorgames.net/server2/roms/playstation-portable/FIFA%2014%20(Russia).zip"><button  id="downloadButton7" class=Download>Download</button></p><a/><br><br><br><br><hr></a>
+</td>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">FIFA 14</marquee></h1></centre><hr></a><br><br>Size: 1.50 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click  <a href="http://videogame-version22.blogspot.com/2024/06/game-overview-fifa-14-is-popular.html"> here.</a>"</p>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">SmackDown vs Raw 2011</marquee></h1></centre><hr></a><br><br>Size: 1.40 GB <br>Rate : &#x2B50;&#x2B50;&#x2B50;&#x2B50;<br> compatibility:PSP<br>(<a href="https://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Download psp for Android</a>) <br> "For more information, such as game quality, audio, installation process, and pros and cons of the video game, click <a href="http://videogame-version22.blogspot.com/2024/06/game-overview-wwe-smackdown-vs.html"> here.</a>"
+</p></td> 
+<td style="padding: 5% 5%; ">
+<centre><a href="game_index.html"><img src="https://th.bing.com/th/id/OIP.8sdRplWPgJHeGCyYW-82awHaM0?w=115&h=180&c=7&r=0&o=5&pid=1.7"  height="60%" width="60%"></img><br><a href="
+https://server.emulatorgames.net/server2/roms/playstation-portable/WWE%20SmackDown!%20vs.%20RAW%202011%20(USA).zip"><button  id="downloadButton8" class=Download>Download</button><br><br><br><br><hr></a>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+</div>
+</section>
+
+<section id="about">
+<div class="end">
+        <h1> Hello , I am Victos creater of this website which help to make your game experience amazing . provide different kind of games option </h1>
+        <br><hr>
+
+        <table>
+                <tr>
+                <td style="width: 35%;">  <h1>VIDEO GAME HQ:</h1><br>
+                    <p style="text-align: justify;"> "Welcome to VERSION VIDEO GAMER, where we unveil our brand-new video game website. We are dedicated to offering the finest and most trusted video games available. Additionally, we meticulously present both the pros and cons of every game featured here, ensuring you make informed choices.
+<br>
+We encourage you to immerse yourself in the gaming experience and share your feedback with us. Whether it's about the games themselves or any related information, we're here to listen.
+<br>
+Stay updated by joining our Telegram channel for more games and updates. VERSION VIDEO GAMER is committed to providing you with the latest in gaming entertainment. Let the adventure begin!"</p></td>
+
+                <td style="width: 50%;"> <h1>CONTACT US:</h1>
+                        <p >contact us for any help or more information related event organizing<br>
+                            <b> location: </b>  Laxmisagar, BBSR, Bhubaneshwar-751006 <br><br>
+                        <b>Email:</b> ---------------------------- <br>
+                        <b>Mobile No.:</b> --------------------
+
+                        </p> 
+                </td>
+
+                <td><p><a href="#" class="fa fa-facebook"></a></p> <p><a href="#" class="fa fa-twitter"></a></p><p><a href="#" class="fa fa-instagram"></a></p><p><a href="#" class="fa fa-whatsapp "></a></p>
+                <p><a href="#" class="fa fa-telegram "></a></p> <p><a href="#" class="fa fa-snapchat "></a></p></tr>
+
+</table>
+              <p style="color:green; font-size: 10px; float:right">Copyright 2023 by 000WEBHOST.All Rights Reserved.</p>
+</section>
+</div>
+    <footer>
+        <p>&copy; 2024 Version V website (Power by 000webhost)</p>
+    </footer>
+
+
+<div class="popup">
+    <button id="close">&times;</button>
+    <fieldset>
+        <center>
+            <legend><h2>Hello, my friends. Please read the text below carefully.</h2></legend>
+            <h3>👉 OUR EXPERTISE AND POINTS OF KNOWLEDGE 👈</h3>
+        </center> 
+        <p>
+            <ul>
+                <li>We provide 7+ games with monthly updates of more games.</li>
+                <li>We offer the best emulator for running your games smoothly.</li>
+                <li>We provide command options in our blog for each game to resolve your problems.</li>
+                <li>We offer ad-free, trusted-checked video games that are easy to run.</li>
+            </ul>
+        </p>
+    </fieldset>
+</div>
+
+<script>
+    let popupDisplayed = false;
+    window.addEventListener("load", function() {
+        if (!popupDisplayed) {
+            setTimeout(function() {
+                document.querySelector(".popup").style.display = "block";
+                popupDisplayed = true;
+            }, 2000);
+        }
+    });
+
+    document.getElementById("close").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "none";
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>var buttons = document.querySelectorAll('[id^="downloadButton"]');
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var button = this; // 'this' refers to the button element clicked
+        button.disabled = true;
+        button.innerText = 'Wait Downloading...';
+        
+        setTimeout(function() {
+            button.disabled = false;
+            button.innerText = 'Download';
+        }, 4000); // 2000 milliseconds delay
+    });
+});
+
+
+</script>
+</body>
+</html>
